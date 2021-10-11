@@ -52,32 +52,48 @@ header nav ul li a {
     background-position: center;
 }
 
-/*#contents {
-    text-align: center;
+#contents {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.content {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    background-color: #0072bb;
+    color: #ffffff;
+    overflow: auto;
 }
 
 .content img {
  max-height: 200px;
  float: left;
+ margin-right: 25px;
 }
 
-.content .explainers h3 {
-    font-size: 32px;
-    margin-bottom: 8px;
+.content .left-margin {
+    margin-right: 0;
+    margin-left: 25px;
 }
 
-.content .explainers p {
-    display: inline-block;
-    font-size: 16px;
-}
-
-.text-left {
+.explainers {
+    padding: 5px;
+    float: left;
+    width: 65%;
     text-align: left;
 }
 
-.text-right {
-    text-align: right;
+.explainers h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: left;
 }
+
+.explainers p {
+    font-size: 16px;
+    line-height: 1.3;
+}
+
 
 
 
