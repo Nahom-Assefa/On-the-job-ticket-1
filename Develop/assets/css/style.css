@@ -1,48 +1,57 @@
+/* Universal Selector*/
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
+/* Put the font-family in the body and overided where necessary*/
 body {
     background-color: #d9dcd6;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/*Removed color from the header as h1 and li elements have different color specifications*/
 header {
     padding: 20px 35px;
     background-color: #2a607c;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/*Made the h1 element inline-block so doesn't take the whole width of parent element*/
 header h1 {
     display: inline-block;
     font-size: 48px;
-    color: #ffffff;
 }
-
+/*Removed the seo class and put in an anchor tag to make h1 clickable*/
 header h1 a {
     color: #d9dcd6;
     text-decoration: none;
 }
 
+/*Floated the Nav bar to the right of the h1 element*/
 header nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
+    font-size: 20px;
 }
 
+/*Added list-style property and set to none to remove hidden bullet points*/
 header nav ul li {
-    display: inline;
+    display: inline-block;
     margin-left: 25px;
+    list-style: none;
 }
 
+/*Gave context to the independent anchor tag because its bad practice as a standalone as it may apply unwanted styling to anchor tags added in the future*/
 header nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: lighter;
-    font-size: 20px;
 }
 
+/*No adjustments made to the hero class*/
 .hero {
     height: 800px;
     width: 100%;
@@ -52,92 +61,62 @@ header nav ul li a {
     background-position: center;
 }
 
+/*Set section to position relative to be able to absolutely position child elements inside of it*/
 #contents {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    display: inline-block;
+    margin-left: 20px;
+    position: relative;
 }
 
+/*Collapsed all css styling that were once independent classes into one class as they had the same styling specifications*/
 .content {
+    width: 1080px;
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     background-color: #0072bb;
     color: #ffffff;
-    overflow: auto;
+    display: inline-block;
 }
 
+/*Overrode the margin bottom of 20px in third content box.*/
+.third-content-box {
+    margin-bottom: 0px;
+}
+
+/*Floated images relative to text content*/
 .content img {
  max-height: 200px;
  float: left;
  margin-right: 25px;
 }
 
+/*Neutralized the margin right applying to all image tags in content class and added margin-left to the image within second content class*/
 .content .left-margin {
     margin-right: 0;
     margin-left: 25px;
 }
 
+/*Grouped the h2 and p tags within the content section in one class so they float together*/
 .explainers {
     padding: 5px;
     float: left;
     width: 65%;
-    text-align: left;
 }
 
+/*No adjustments to the h2 within the explainer class*/
 .explainers h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
-    text-align: left;
 }
 
+/*Added line-height to paragraph tag for the asethetics*/
 .explainers p {
     font-size: 16px;
     line-height: 1.3;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-.content {
-    width: 75%;
-    display: inline-block;
-    margin-left: 20px;
-}
-
-p {
-    font-size: 16px;
-}
-
-header div ul {
-    list-style-type: none;
-}
-
+/*Added position absolute and right and bottom to manipulate the element in relation to parent*/
 .benefits {
     margin-right: 20px;
     padding: 20px;
@@ -145,119 +124,34 @@ header div ul {
     float: right;
     width: 20%;
     height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
 }
 
-.benefit-lead {
+/*Collapsed all css styling that were once independent classes into one class as they had the same styling specifications*/
+.benefit {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+/*No styling changes but is being applied via one class*/
+.benefit img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
-    max-height: 200px;
-}
-
-.online-reputation-management img {
-    max-height: 200px;
-}
-
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+/*Removed the div and class to replace with footer tag. Overided body font-family*/
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+/*Removed the div and class to replace with footer tag*/
+footer h2 {
     font-size: 20px;
 }
