@@ -20,5 +20,11 @@ versions of the positioning style until I realized the parent needed a relative 
 issue became the margin bottom of 20px applying to each inividual content section. To deal with this instead of adding a second class selector to the third content box I used the 
 styling property nth-of-type to loop over until it reached the third child to set the margin bottom to 0px. This allowed the benefits class to be in line with the third content box instead of being longer by 20px due to the margin bottom issue.
 
-#### License and Copyright 
+### Screenshot
+![](assets/images/screenshot.png)
+
+#### Link
+https://nahom-assefa.github.io/On-the-job-ticket-1/
+
+##### License and Copyright 
 © Xander Rapstine, Trilogy Education Services/2U
